@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1553129567 source:d:\hurtado\prueba\main.c
+	<stdio.h>
+	<stdlib.h>
+
