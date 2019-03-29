@@ -9,11 +9,14 @@ void prueba(void)
 
 
 
-int utn_getnumber(int* puntero,int max, int min,char msg[],char msgError[])
+int utn_getnumber(int* puntero,int max, int min,char msg[],char msgError[],int intentos)
 {
 
  int numero;
  int retorno;
+
+ while(intentos>0)
+ {
  printf(msg);
  scanf("%d",&numero);
 
@@ -22,11 +25,16 @@ int utn_getnumber(int* puntero,int max, int min,char msg[],char msgError[])
  {
     printf("%s",msgError);
     retorno=1;
+
  }
+
  else
  {
   printf("bien");
       retorno=0;
+    break;
+ }
+ intentos--;
 
  }
 *puntero=numero;
